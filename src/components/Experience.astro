@@ -1,0 +1,64 @@
+---
+const jobs = [
+	{
+		title: 'Self Learning',
+		company: 'Frontend Mentor Challenges',
+		timeRange: '2023-Present',
+		description:
+			'Improve your front-end skills by building real projects. Solve real-world HTML, CSS and JavaScript challenges whilst working to professional designs',
+	},
+	{
+		title: 'University Student',
+		company: 'University of Auckland',
+		timeRange: '2021-2022',
+		description: `During my studies we learnt web-based applications, client-side technologies (HTML, CSS, Bootstrap, Javascript) 
+    and server-side technologies (nodeJS, ExpressJS, Handlebars, and Cookies) to support dynamic web pages and data access. 
+    Fundamental relational database concepts and design techniques using ER diagrams and SQLite. Build a web-based application that dynamically generates content involving relational 
+    database access.`,
+	},
+];
+---
+
+<section
+	aria-labelledby=":rr:"
+	class="mx-auto max-w-5xl sm:px-6 sm:border-l sm:border-primary-700/40"
+>
+	<div class="grid grid-cols-1 gap-y-8 items-baseline md:grid-cols-4">
+		<h2
+			id=":rr:"
+			class="text-lg font-semibold tracking-tight sm:text-xl text-primary-100"
+		>
+			Experience
+		</h2>
+		<div class="md:col-span-3">
+			<ul role="list" class="space-y-16">
+				{
+					jobs.map((j) => (
+						<li class="flex flex-col items-start">
+							<>
+								<div class="flex flex-row justify-between items-baseline pl-2 w-full border-l border-primary-700">
+									<div class="flex flex-col">
+										<div class="flex flex-row gap-2 items-center">
+											<h3 class="text-base font-semibold tracking-tight sm:max-w-none sm:text-lg max-w-[20ch] text-primary-100">
+												{j.company}
+											</h3>
+										</div>
+
+										<h2 class="text-sm tracking-tight sm:max-w-none sm:text-base max-w-[20ch] text-primary-300">
+											{j.title}
+										</h2>
+									</div>
+									<time class="text-sm text-primary-600">{j.timeRange}</time>
+								</div>
+
+								<p class="z-10 mt-4 text-justify text-sm text-primary-300 max-w-[75ch]">
+									{j.description}
+								</p>
+							</>
+						</li>
+					))
+				}
+			</ul>
+		</div>
+	</div>
+</section>

@@ -1,0 +1,47 @@
+---
+import ProjectsGrid from '@components/ProjectsGrid.astro';
+import Layout from '@layout/Layout.astro';
+
+const projects = [
+	{
+		name: 'QR Code Card',
+		description: 'Created a QR Code card testing basic layout skills.',
+		link: 'https://github.com/dawkey95/QR-Code-Challenge',
+		imageURL: '/images/QR-Code-Project.png',
+	},
+	{
+		name: 'NFT Preview Card',
+		description: 'Created a NFT card with hover effects and basic layout skills.',
+		link: 'https://github.com/dawkey95/NFT-Preview-Challenge',
+		imageURL: '/images//NFT-Card-Project.png',
+	},
+	{
+		name: 'Results Summary',
+		description: 'Results summary project for with hover effect on button.',
+		link: 'https://github.com/dawkey95/Results-Summary-Challenge',
+		imageURL: '/images//Results-Summary-Project.png',
+	},
+];
+---
+
+<Layout
+	pageTitle="Projects"
+	description="Things I’ve created to make the world around me a little different"
+	type="content"
+>
+	<main class="px-8 pt-16 mx-auto max-w-6xl sm:pt-24 lg:px-16">
+		<div class="flex flex-col mt-4 space-y-8">
+			<div class="flex flex-col space-y-4">
+				<h1 class="text-4xl font-bold tracking-tighter sm:text-5xl max-w-[25ch]">
+					My Creations
+				</h1>
+				<p class="text-primary-300 max-w-[65ch]">
+					This is a collection of projects I have done to build experience and
+					continue to develop myself as a developer. I am proud of what I have
+					achieved and I am excited to see what I can do in the future.
+				</p>
+			</div>
+			<ProjectsGrid projects={projects} />
+		</div>
+	</main>
+</Layout>
