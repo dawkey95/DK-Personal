@@ -13,6 +13,7 @@
     "format": "rustywind --write . && pnpm prettier --plugin-search-dir=. --write ."
   },
   "dependencies": {
+    "@astrojs/netlify": "^2.2.0",
     "@astrojs/prefetch": "^0.2.1",
     "@astrojs/rss": "^2.3.1",
     "@astrojs/sitemap": "^1.2.1",
