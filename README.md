@@ -4,7 +4,7 @@ Super solstice is a meticulously crafted theme for astro using Tailwind that is 
 
 This theme follows best practices and provides accessibility out of the box. Light and dark mode are supported by default. Moreover, additional color schemes can also be configured.
 
-https://super-solstice.vercel.app/
+https://dk-personal.netlify.app/
 
 # ❤️‍🔥 Features
 
